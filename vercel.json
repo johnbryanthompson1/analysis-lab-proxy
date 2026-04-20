@@ -4,5 +4,12 @@
       "memory": 128,
       "maxDuration": 30
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/proxy",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "/api/proxy.js"
+    }
+  ]
 }
