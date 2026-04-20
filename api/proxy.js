@@ -22,9 +22,9 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
+        'anthropic-version': '2023-06-01'
       },
-      body: JSON.stringify(req.body),
+      body: JSON.stringify(req.body)
     });
 
     const text = await upstreamResponse.text();
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
   } catch (err) {
     return res.status(500).json({
       error: 'Proxy request failed',
-      details: err.message,
+      details: err.message
     });
   }
 }
